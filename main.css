@@ -7,14 +7,33 @@ body {
 
 h7 {
 	font-family: sans-serif;
-	font-weight: bolder;
+	font-weight: bold;
 	color: #E39F0E;
 	font-size: 1rem;
+}
+
+h6 {
+	font-family: sans-serif;
+	font-weight: bold;
+	color: #1D1F34;
+	font-size: 1rem;
+}
+
+a {
+  color: #3E4A6B;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a:hover {
+  color: #0F131F;
+  text-decoration: underline;
 }
 
 .homebg {
 	margin: 0;
 	padding: 0;
+	background: #242B3E;
 	background-image: url("images/scroll.png");
 	background-attachment: fixed;
   	background-position: center;
@@ -26,26 +45,23 @@ h7 {
 .diningbg{
 	margin: 0;
 	padding: 0;
-	background: red;
-	background-attachment: fixed;
-  	background-position: center;
- 	background-repeat: no-repeat;
- 	background-size: cover;
+	background: #242B3E;
 	height: 100%;
 }
 
 .navbar-brand {
   display: inline-block;
-  padding-top: 1rem;
-  padding-bottom: 0.5rem;
+	margin-top: 0.3rem;
+	margin-bottom: 0.3rem;
   margin-right: 1rem;
 	margin-left: 20rem;
   font-size: 1.25rem;
   line-height: inherit;
   white-space: nowrap;
-	border-right-style: solid;
-	border-right: thin;
+	border-right-style: inset;
+	border-right-width: thin;
 	border-right-color: #E39F0E;
+	padding-right: 5rem;
 }
 
 .navbar-nav {
@@ -73,22 +89,17 @@ h7 {
 	text-decoration-color: #E39F0E;
 }
 
-img {
-  vertical-align: middle;
-  border-style: none;
-}
-
 .card2 {
   position: relative;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-width: 0;
+  min-width: 0rem;
   word-wrap: break-word;
   background-color: transparent;
   background-clip: padding-box;
-  border: 0px;
+  border: 0rem;
   border-radius: 0.25rem;
 	margin-left:43rem;
 	margin-bottom: 16rem;  
@@ -106,7 +117,7 @@ img {
   border: 0px;
   border-radius: 0.25rem;
 	margin-left:15rem;
-	margin-bottom: 16rem;  
+	margin-bottom: 19.5rem;  
 }
 
 .btn-primary {
@@ -125,13 +136,18 @@ img {
 .card-body {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  padding: 1.25rem;
+  padding-top: 10rem;
 	font-weight: 500;
 	font-size: 2rem;
-	color:#FFB400;
+	color:#FFB70F;
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+	padding-bottom: 10rem;
 }
 
 .card-title {
+  margin-top: .3rem;
+  text-align: center;
   margin-bottom: 0.75rem;
 	font-weight: bolder;
 	font-size: 3rem;
@@ -165,21 +181,59 @@ img {
   border-left: 0.3em solid transparent;
 }
 
-.showcase{
-	padding-top:10rem;
-	padding-bottom: 50rem;
+.card-custom {
+        max-width: 400px;
+	padding-bottom: 0rem;
 }
 
-.navbar-brand {
-  display: inline-block;
-  padding-top: 0.3125rem;
-  padding-bottom: 0.3125rem;
-  margin-right: 1rem;
-  font-size: 1.25rem;
-  line-height: inherit;
-  white-space: nowrap;
+.filler{
+	margin: 0;
+	padding: 1rem;
+	background: #ffe196; 
 }
 
-.navbar-brand:hover, .navbar-brand:focus {
-  text-decoration: none;
+.card-text:last-child {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.card-title2 {
+  color: #1D1F34;
+  margin-top: .3rem;
+  text-align: center;
+  margin-bottom: 0.75rem;
+	font-weight: bolder;
+	font-size: 3rem;
+}
+
+.card-text2:last-child {
+  color: #1D1F34;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.card-img-right {
+  width: 100%;
+  border-radius: calc(0.25rem - 1px);
+  border-right: calc(0.25rem - 1px);
+}
+
+.card-map {
+  margin: 0;
+  padding-right: 0;
+padding-bottom: 0rem;
+max-width: 400px; 
+padding-top: 5rem;
+}
+
+.map{
+  position: relative;
+  display: block;
+  float: right;
+  width: 100%;
+  padding: 1rem;
+}
+
+footer{
+  background-color: #ffe196;
 }
