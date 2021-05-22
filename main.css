@@ -2,7 +2,7 @@ body {
 	margin: 0;
 	padding: 0;
 	height: 100%;
-	font-family: sans-serif;
+	font-family: 'Times New Roman', serif;
 }
 
 h7 {
@@ -30,30 +30,37 @@ a:hover {
   text-decoration: underline;
 }
 
-.homebg {
+.parallax{
+  margin: 0;
+	padding: 0;
+	background-image: url("images/poolbg.png");
+	background-attachment: fixed;
+  background-position: center;
+ 	background-repeat: no-repeat;
+ 	background-size: cover;
+	height: 100%
+}
+
+.parallax-yellow {
 	margin: 0;
 	padding: 0;
-	background: #242B3E;
-	background-image: url("images/scroll.png");
+	background-image: url("images/poolbgfade.png");
 	background-attachment: fixed;
-  	background-position: center;
+  background-position: center;
  	background-repeat: no-repeat;
  	background-size: cover;
 	height: 100%;
 }
 
-.diningbg{
-	margin: 0;
-	padding: 0;
-	background: #242B3E;
-	height: 100%;
+.navbar{
+  padding: 0rem;
+	padding-top: 0rem;
+  border-bottom:2px outset rgba(0,0,0,0.05);
 }
 
 .navbar-brand {
   display: inline-block;
 	margin-top: 0.3rem;
-	margin-bottom: 0.3rem;
-  margin-right: 1rem;
 	margin-left: 20rem;
   font-size: 1.25rem;
   line-height: inherit;
@@ -61,7 +68,9 @@ a:hover {
 	border-right-style: inset;
 	border-right-width: thin;
 	border-right-color: #E39F0E;
-	padding-right: 5rem;
+	padding-right: 2rem;
+  padding-left: 20rem;
+  padding-bottom: 0.5rem;
 }
 
 .navbar-nav {
@@ -69,7 +78,7 @@ a:hover {
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding-left: 0;
+  padding: 0;
   list-style: none;
 	margin-right: 20rem;
 	margin-top: 2rem;
@@ -153,12 +162,6 @@ a:hover {
 	font-size: 3rem;
 }
 
-.navbar {
-  padding: 0rem;
-	padding-top: 0rem;
-
-}
-
 .dropdown-item:hover, .dropdown-item:focus {
   color: #E39F0E;
   text-decoration: none;
@@ -188,7 +191,8 @@ a:hover {
 
 .filler{
 	margin: 0;
-	padding: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 0rem;
 	background: #ffe196; 
 }
 
@@ -228,12 +232,357 @@ padding-top: 5rem;
 
 .map{
   position: relative;
-  display: block;
-  float: right;
   width: 100%;
-  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 footer{
-  background-color: #ffe196;
+  background-color: #fff;
+  border-top:2px outset rgba(0,0,0,0.1);
 }
+
+.center {
+  height: 200px;
+  position: relative;
+}
+
+.center h7, desc{
+  padding-top: 15rem;
+  text-align: center;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:#1D1F34;
+}
+.card-title-alt{
+  color: #1D1F34;
+  margin-top: .3rem;
+  text-align: center;
+  margin-bottom: 0.75rem;
+	font-weight: bolder;
+	font-size: 3rem;
+
+}
+
+*, *:before, *:after{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:border-box;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 640px){
+  .container-overlay{
+    display: block;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 900px){
+  .container-overlay{
+    width: 33.33333%;
+  }
+}
+
+.container-overlay{
+  padding: 1em 0;
+  float: left;
+  width: 50%;
+}
+
+.container-overlay .title{
+  color: #1a1a1a;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.content {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.content .content-overlay {
+  background: rgba(0,0,0,0.7);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.content:hover .content-overlay{
+  opacity: 1;
+}
+
+.content-image{
+  width: 100%;
+  height: 100%;
+}
+
+.content-details {
+  position: absolute;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.content:hover .content-details{
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+
+.content-details h3{
+  color: #E39F0E;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+}
+
+.content-details p{
+  color: #E39F0E;
+  font-size: 0.8em;
+}
+
+.container-max{
+  width: 100%;
+  padding-right: 5rem;
+  padding-left: 5rem;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.desc{
+  padding-top: 15rem;
+  color: #1a1a1a;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.py-5 {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding-top: 10rem;
+	font-weight: 500;
+	font-size: 2rem;
+	color:#FFB70F;
+  padding-top: 10rem !important;
+  padding-bottom: 10rem !important;
+}
+
+.section {
+  position: relative;
+  height:65vh;
+  margin-bottom: 0;
+}
+
+.section .section-center {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  padding-bottom: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%)
+}
+
+#booking {
+  font-family: 'Raleway', sans-serif
+}
+
+.booking-form {
+  position: relative;
+  max-width: 1000px;
+  width: 100%;
+  margin: auto;
+  padding: 0px;
+  overflow: hidden;
+  border-radius: 5px;
+  z-index: 20;
+}
+
+.booking-form::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: transparent;
+  z-index: -1
+}
+
+.booking-form .form-header {
+  text-align: center;
+  position: relative;
+  margin-bottom: 30px
+}
+
+.booking-form .form-header h1 {
+  font-weight: 700;
+  text-transform: capitalize;
+  font-size: 42px;
+  margin: 0px;
+  color:#1D1F34
+}
+
+.booking-form .form-group {
+  position: relative;
+  margin-bottom: 30px
+}
+
+.booking-form .form-control {
+  background-color: rgba(255, 255, 255, 0.6);
+  height: 60px;
+  padding: 0px 25px;
+  border: solid;
+  border-radius: 40px;
+  color: #1D1F34;
+  -webkit-box-shadow: 0px 0px 0px 2px transparent;
+  box-shadow: 0px 0px 0px 2px transparent;
+  -webkit-transition: 0.2s;
+  transition: 0.2s
+}
+
+.booking-form .form-control::-webkit-input-placeholder {
+  color: #1D1F34;
+}
+
+.booking-form .form-control:-ms-input-placeholder {
+  color: #1D1F34;
+}
+
+.booking-form .form-control::placeholder {
+  color: #1D1F34;
+}
+
+.booking-form .form-control:focus {
+  -webkit-box-shadow: 0px 0px 0px 2px #ff8846;
+  box-shadow: 0px 0px 0px 2px #ff8846
+}
+
+.booking-form input[type="date"].form-control {
+  padding-top: 16px
+}
+
+.booking-form input[type="date"].form-control:invalid {
+  color: #1D1F34
+}
+
+.booking-form input[type="date"].form-control+.form-label {
+  opacity: 1;
+  top: 10px
+}
+
+.booking-form select.form-control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none
+}
+
+.booking-form select.form-control:invalid {
+  color: #1D1F34
+}
+
+.booking-form select.form-control+.select-arrow {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 32px;
+  line-height: 32px;
+  height: 32px;
+  text-align: center;
+  pointer-events: none;
+  color: #1D1F34;
+  font-size: 14px
+}
+
+.booking-form select.form-control+.select-arrow:after {
+  content: '\279C';
+  display: block;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg)
+}
+
+.booking-form select.form-control option {
+  color: #000
+}
+
+.booking-form .form-label {
+  position: absolute;
+  top: -10px;
+  left: 25px;
+  opacity: 0;
+  color: #ff8846;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  height: 15px;
+  line-height: 15px;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all
+}
+
+.booking-form .form-group.input-not-empty .form-control {
+  padding-top: 16px
+}
+
+.booking-form .form-group.input-not-empty .form-label {
+  opacity: 1;
+  top: 10px
+}
+
+.booking-form .submit-btn {
+  color: #1D1F34;
+  background-color: #E39F0E;
+  font-weight: 700;
+  height: 60px;
+  padding: 10px 30px;
+  width: 100%;
+  border-radius: 40px;
+  border: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 1.3px;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all
+}
+
+.booking-form .submit-btn:hover,
+.booking-form .submit-btn:focus {
+  opacity: 0.8
+}
+
+.d-flex img{
+   width: 80%;
+   margin: auto;
+}
+
