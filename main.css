@@ -596,3 +596,44 @@ footer{
   color: #E39F0E;
 }
 
+.parallax-amenities{
+  margin: 0;
+	padding: 0;
+	background-image: url("images/amenities.jpg");
+	background-attachment: fixed;
+  background-position: center;
+ 	background-repeat: no-repeat;
+ 	background-size: cover;
+	height: 100%
+}
+
+.title-about{
+  font-weight: bolder;
+  text-align: center;
+  color: #E39F0E;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+}
+
+.text-about{
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 200%;
+  font-size: 20px;
+  padding-left: 20rem;
+  padding-right: 20rem;
+  margin-top: 0;
+  text-align: justify;
+  text-justify: inter-word;
+}
+.centerlogo{
+  display: block;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.color-text{
+  color: #E39F0E;
+  font-weight: bolder;
+}
